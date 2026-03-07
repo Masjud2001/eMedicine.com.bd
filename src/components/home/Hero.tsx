@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Plus, ChevronRight, FileUp, Zap, Clock, ShieldCheck, HeartPulse, Sparkles, Star, ArrowRight } from "lucide-react";
+import { Plus, FileUp, Zap, Clock, ShieldCheck, HeartPulse, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 
@@ -40,7 +40,7 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-lg md:text-2xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0"
                     >
-                        Get authentic medicines, healthcare essentials, and pharmacist support within hours. Bangladesh's most reliable online pharmacy service.
+                        Get authentic medicines, healthcare essentials, and pharmacist support within hours. Bangladesh&apos;s most reliable online pharmacy service.
                     </motion.p>
 
                     <motion.div
