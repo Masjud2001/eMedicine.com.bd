@@ -3,10 +3,11 @@
 import { products } from "@/data/mock-data";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { Plus, Minus, ShoppingCart, Heart, Share2, Info, Star, ShieldCheck, CheckCircle2, ChevronRight, MessageCircle } from "lucide-react";
+import { Plus, Minus, ShoppingCart, Heart, Share2, Info, Star, ShieldCheck, CheckCircle2, ChevronRight, MessageCircle, HeartPulse, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { ProductCard } from "@/components/shared/ProductCard";
+import Link from "next/link";
 
 interface ProductDetailViewProps {
     id: string;

@@ -6,7 +6,7 @@ const Button = React.forwardRef<
     HTMLButtonElement,
     React.ButtonHTMLAttributes<HTMLButtonElement> & {
         asChild?: boolean;
-        variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "danger";
+        variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "danger" | "accent";
         size?: "sm" | "md" | "lg" | "icon";
     }
 >(({ className, variant = "primary", size = "md", asChild = false, ...props }, ref) => {
@@ -15,6 +15,7 @@ const Button = React.forwardRef<
     const variants = {
         primary: "bg-primary-500 text-white hover:bg-primary-600 shadow-soft",
         secondary: "bg-secondary-500 text-white hover:bg-secondary-600 shadow-soft",
+        accent: "bg-emerald-500 text-white hover:bg-emerald-600 shadow-soft",
         outline: "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300",
         ghost: "bg-transparent text-slate-600 hover:bg-slate-100",
         link: "bg-transparent text-primary-500 underline-offset-4 hover:underline",

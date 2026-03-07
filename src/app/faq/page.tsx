@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Search, ChevronDown, HelpCircle, ShieldCheck, Truck, CreditCard, HeartPulse, Plus, Minus, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import Link from "next/link";
 
 const faqs = [
     {

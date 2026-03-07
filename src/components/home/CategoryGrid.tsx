@@ -4,6 +4,7 @@ import { CategoryCard } from "@/components/shared/CategoryCard";
 import { categories } from "@/data/mock-data";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 const CategoryGrid = () => {
     return (
