@@ -1,4 +1,4 @@
-# MediCare BD - Architecture Documentation
+# eMedicine BD - Architecture Documentation
 
 This document outlines the project's folder structure, component hierarchy, and design system.
 

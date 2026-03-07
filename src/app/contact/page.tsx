@@ -38,7 +38,7 @@ export default function ContactPage() {
                                     </div>
                                     <div className="text-left">
                                         <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-none block mb-1">Send Email</span>
-                                        <p className="text-xl font-black text-slate-900 italic">support@medicarebd.com</p>
+                                        <p className="text-xl font-black text-slate-900 italic">support@emedicinebd.com</p>
                                     </div>
                                 </div>
                             </div>

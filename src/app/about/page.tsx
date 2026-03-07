@@ -17,7 +17,7 @@ export default function AboutPage() {
                                 <Globe size={16} strokeWidth={3} />
                                 Established in 2026
                             </div>
-                            <h1 className="text-5xl md:text-8xl font-black text-slate-900 leading-[1.05] tracking-tight italic underline decoration-slate-100 underline-offset-8">We are <span className="text-primary-500">MediCare BD</span>. Helping Bangladesh Stay Healthy.</h1>
+                            <h1 className="text-5xl md:text-8xl font-black text-slate-900 leading-[1.05] tracking-tight italic underline decoration-slate-100 underline-offset-8">We are <span className="text-primary-500">eMedicine BD</span>. Helping Bangladesh Stay Healthy.</h1>
                             <p className="text-xl md:text-2xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
                                 Your most trusted online pharmacy partner in Bangladesh. Providing genuine medicines and healthcare essentials delivered right to your doorstep with love and care.
                             </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
                             <div className="aspect-square bg-white border-8 border-white rounded-[4rem] shadow-2xl overflow-hidden group">
                                 <img
                                     src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1200"
-                                    alt="MediCare BD"
+                                    alt="eMedicine BD"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
@@ -102,7 +102,7 @@ export default function AboutPage() {
                                     15,000+ Verified SKU Available
                                 </div>
                                 <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight drop-shadow-2xl">Experience Health <br />like Never Before.</h2>
-                                <p className="text-lg font-medium text-slate-400 max-w-xl opacity-80 uppercase tracking-widest leading-relaxed">Start your journey with MediCare BD today and get exclusive discounts.</p>
+                                <p className="text-lg font-medium text-slate-400 max-w-xl opacity-80 uppercase tracking-widest leading-relaxed">Start your journey with eMedicine BD today and get exclusive discounts.</p>
                             </div>
                             <Link href="/auth">
                                 <Button size="lg" className="h-24 px-16 rounded-[2.5rem] text-2xl font-black gap-6 shadow-2xl active:scale-95 transition-all text-white bg-primary-500 hover:bg-primary-600 border-none group">

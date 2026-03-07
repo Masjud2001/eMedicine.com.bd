@@ -1,6 +1,6 @@
-# MediCare BD - Project Overview
+# eMedicine BD - Project Overview
 
-MediCare BD is a modern, responsive, and conversion-focused e-commerce pharmacy platform for Bangladesh. It provides a professional, safe, and fast digital healthcare experience, allowing users to order genuine medicines, upload prescriptions, and consult with doctors online.
+eMedicine BD is a modern, responsive, and conversion-focused e-commerce pharmacy platform for Bangladesh. It provides a professional, safe, and fast digital healthcare experience, allowing users to order genuine medicines, upload prescriptions, and consult with doctors online.
 
 ---
 

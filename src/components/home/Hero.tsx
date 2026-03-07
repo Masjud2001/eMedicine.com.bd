@@ -108,7 +108,7 @@ const Hero = () => {
                     <div className="relative z-10 w-full aspect-square md:aspect-[4/3] rounded-[3rem] bg-white shadow-2xl overflow-hidden border-8 border-white group">
                         <img
                             src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1200"
-                            alt="MediCare BD Pharmacy"
+                            alt="eMedicine BD Pharmacy"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
                         {/* Overlay */}

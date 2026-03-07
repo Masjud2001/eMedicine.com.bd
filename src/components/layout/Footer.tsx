@@ -12,7 +12,7 @@ const Footer = () => {
                             <Plus size={24} className="text-white" />
                         </div>
                         <span className="text-2xl font-bold tracking-tight text-white">
-                            Medi<span className="text-primary-500">Care</span> <span className="text-secondary-500">BD</span>
+                            eMedicine <span className="text-secondary-500">BD</span>
                         </span>
                     </Link>
                     <p className="text-sm leading-relaxed max-w-xs">
@@ -81,7 +81,7 @@ const Footer = () => {
                             <Mail size={22} className="text-secondary-500 shrink-0 mt-0.5" />
                             <div>
                                 <span className="text-sm text-slate-200 font-semibold block mb-1">Support Email</span>
-                                <p className="text-sm text-white">support@medicarebd.com</p>
+                                <p className="text-sm text-white">support@emedicinebd.com</p>
                             </div>
                         </li>
                     </ul>
@@ -117,7 +117,7 @@ const Footer = () => {
             </div>
 
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500">
-                <p>&copy; 2026 MediCare BD Online Pharmacy. All rights reserved.</p>
+                <p>&copy; 2026 eMedicine BD Online Pharmacy. All rights reserved.</p>
                 <div className="flex space-x-6">
                     <Link href="/terms" className="hover:text-white">Terms & Conditions</Link>
                     <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>

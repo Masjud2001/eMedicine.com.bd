@@ -1,6 +1,6 @@
-# MediCare BD - User Guide
+# eMedicine BD - User Guide
 
-A brief guide on the primary user flows for the MediCare BD platform.
+A brief guide on the primary user flows for the eMedicine BD platform.
 
 ---
 
@@ -58,4 +58,4 @@ A brief guide on the primary user flows for the MediCare BD platform.
 
 - **24/7 Hotline**: Call `+880 1234 567 890` for immediate assistance.
 - **WhatsApp**: Use the floating chat button (emerald circle) for instant pharmacist guidance.
-- **Email**: Reach us at `support@medicarebd.com`.
+- **Email**: Reach us at `support@emedicinebd.com`.
