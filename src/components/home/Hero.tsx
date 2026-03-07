@@ -159,10 +159,10 @@ const Hero = () => {
                             <p className="text-xs text-slate-400 leading-relaxed font-medium">Order previous medications<br />with just one tap.</p>
                         </div>
                     </motion.div>
+                </motion.div>
             </div>
-        </div>
-    </section >
-  );
+        </section>
+    );
 };
 
 export { Hero };
