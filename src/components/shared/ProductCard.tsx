@@ -88,6 +88,3 @@ const Rocket = ({ size, className, fill }: { size: number, className?: string, f
 );
 
 export { ProductCard };
-
-
-export { ProductCard };

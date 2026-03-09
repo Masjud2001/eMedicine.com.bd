@@ -3,125 +3,121 @@ import { Plus, Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, Check
 
 const Footer = () => {
     return (
-        <footer className="bg-slate-900 text-slate-400 pt-16 pb-8 px-4 md:px-8">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
+        <footer className="bg-slate-900 text-slate-400 pt-16 pb-12 px-4 md:px-8">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 {/* Brand Info */}
-                <div className="space-y-6">
+                <div className="space-y-8">
                     <Link href="/" className="flex items-center">
-                        <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center mr-2.5">
-                            <Plus size={24} className="text-white" />
+                        <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center mr-2 shadow-sm">
+                            <Plus size={20} className="text-white" />
                         </div>
-                        <span className="text-2xl font-bold tracking-tight text-white">
-                            eMedicine <span className="text-secondary-500">BD</span>
+                        <span className="text-2xl font-black tracking-tighter text-white">
+                            arogga <span className="text-primary-500">BD</span>
                         </span>
                     </Link>
-                    <p className="text-sm leading-relaxed max-w-xs">
-                        Your most trusted online pharmacy partner in Bangladesh. Providing genuine medicines and healthcare essentials delivered right to your doorstep.
+                    <p className="text-sm leading-relaxed max-w-xs font-medium">
+                        Your most trusted online pharmacy partner in Bangladesh. Providing 100% genuine medicines and healthcare essentials delivered right to your doorstep.
                     </p>
-                    <div className="flex items-center space-x-4">
-                        <a href="#" className="p-2.5 bg-slate-800 rounded-full text-white hover:bg-primary-500 transition-colors transform hover:-translate-y-1">
-                            <Facebook size={18} />
-                        </a>
-                        <a href="#" className="p-2.5 bg-slate-800 rounded-full text-white hover:bg-primary-500 transition-colors transform hover:-translate-y-1">
-                            <Twitter size={18} />
-                        </a>
-                        <a href="#" className="p-2.5 bg-slate-800 rounded-full text-white hover:bg-primary-500 transition-colors transform hover:-translate-y-1">
-                            <Instagram size={18} />
-                        </a>
-                        <a href="#" className="p-2.5 bg-slate-800 rounded-full text-white hover:bg-primary-500 transition-colors transform hover:-translate-y-1">
-                            <Youtube size={18} />
-                        </a>
+                    <div className="space-y-4">
+                        <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Connect with us</p>
+                        <div className="flex items-center space-x-3">
+                            <a href="#" className="p-2 bg-slate-800 rounded-lg text-white hover:bg-primary-500 transition-all">
+                                <Facebook size={18} />
+                            </a>
+                            <a href="#" className="p-2 bg-slate-800 rounded-lg text-white hover:bg-primary-500 transition-all">
+                                <Instagram size={18} />
+                            </a>
+                            <a href="#" className="p-2 bg-slate-800 rounded-lg text-white hover:bg-primary-500 transition-all">
+                                <Youtube size={18} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                {/* Categories */}
-                <div className="space-y-6">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider text-sm">Popular Categories</h4>
-                    <ul className="space-y-3.5">
-                        <li><Link href="/category/medicines" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Medicines</Link></li>
-                        <li><Link href="/category/otc-medicines" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">OTC Medicines</Link></li>
-                        <li><Link href="/category/vitamins-supplements" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Vitamins & Supplements</Link></li>
-                        <li><Link href="/category/diabetic-care" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Diabetic Care</Link></li>
-                        <li><Link href="/category/baby-mom" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Baby & Mom Care</Link></li>
-                    </ul>
+                {/* Company & Support */}
+                <div className="grid grid-cols-2 lg:col-span-2 gap-8">
+                    <div className="space-y-6">
+                        <h4 className="text-xs font-black text-white uppercase tracking-widest">Company</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/about" className="text-sm font-semibold hover:text-primary-500 transition-colors">About Us</Link></li>
+                            <li><Link href="/contact" className="text-sm font-semibold hover:text-primary-500 transition-colors">Contact Us</Link></li>
+                            <li><Link href="/faq" className="text-sm font-semibold hover:text-primary-500 transition-colors">FAQ</Link></li>
+                            <li><Link href="/privacy" className="text-sm font-semibold hover:text-primary-500 transition-colors">Privacy Policy</Link></li>
+                        </ul>
+                    </div>
+                    <div className="space-y-6">
+                        <h4 className="text-xs font-black text-white uppercase tracking-widest">Services</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/upload-prescription" className="text-sm font-semibold hover:text-primary-500 transition-colors">Upload Prescription</Link></li>
+                            <li><Link href="/consultation" className="text-sm font-semibold hover:text-primary-500 transition-colors">Doctor Consultation</Link></li>
+                            <li><Link href="/track-order" className="text-sm font-semibold hover:text-primary-500 transition-colors">Track Order</Link></li>
+                            <li><Link href="/refill" className="text-sm font-semibold hover:text-primary-500 transition-colors">Auto Refill</Link></li>
+                        </ul>
+                    </div>
                 </div>
 
-                {/* Quick Links */}
-                <div className="space-y-6">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider text-sm">Customer Service</h4>
-                    <ul className="space-y-3.5">
-                        <li><Link href="/track-order" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Track Order</Link></li>
-                        <li><Link href="/upload-prescription" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Upload Prescription</Link></li>
-                        <li><Link href="/refill" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Request Refill</Link></li>
-                        <li><Link href="/faq" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Frequent Questions (FAQ)</Link></li>
-                        <li><Link href="/contact" className="text-sm hover:text-white hover:translate-x-1 inline-block transition-all">Contact Us</Link></li>
-                    </ul>
-                </div>
-
-                {/* Contact Info */}
-                <div className="space-y-6">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider text-sm">Get In Touch</h4>
-                    <ul className="space-y-5">
-                        <li className="flex gap-3">
-                            <MapPin size={22} className="text-primary-500 shrink-0 mt-0.5" />
-                            <div>
-                                <span className="text-sm text-slate-200 font-semibold block mb-1">Our Office</span>
-                                <p className="text-xs leading-5">Road 12, Banani, Dhaka-1213,<br />Bangladesh</p>
+                {/* App Download */}
+                <div className="space-y-8">
+                    <h4 className="text-xs font-black text-white uppercase tracking-widest">Get our mobile app</h4>
+                    <p className="text-xs font-semibold leading-relaxed">Fastest and easiest way to order medicine from your phone.</p>
+                    <div className="flex flex-col gap-3">
+                        <a href="#" className="flex items-center gap-3 bg-slate-800 hover:bg-slate-700 p-3 rounded-xl transition-all group">
+                            <div className="w-8 h-8 flex items-center justify-center">
+                                <img src="https://img.icons8.com/color/48/google-play.png" alt="Play Store" className="w-full" />
                             </div>
-                        </li>
-                        <li className="flex gap-3">
-                            <Phone size={22} className="text-emerald-500 shrink-0 mt-0.5" />
                             <div>
-                                <span className="text-sm text-slate-200 font-semibold block mb-1">Call Center</span>
-                                <p className="text-xs leading-5 italic">Available 24/7 for you</p>
-                                <p className="text-sm font-bold text-white mt-1">+880 1234 567 890</p>
+                                <p className="text-[8px] font-bold text-slate-400 uppercase leading-none mb-0.5">Get it on</p>
+                                <p className="text-[14px] font-black text-white leading-none">Google Play</p>
                             </div>
-                        </li>
-                        <li className="flex gap-3">
-                            <Mail size={22} className="text-secondary-500 shrink-0 mt-0.5" />
+                        </a>
+                        <a href="#" className="flex items-center gap-3 bg-slate-800 hover:bg-slate-700 p-3 rounded-xl transition-all group">
+                            <div className="w-8 h-8 flex items-center justify-center">
+                                <img src="https://img.icons8.com/ios-filled/50/ffffff/apple-app-store--v1.png" alt="App Store" className="w-full" />
+                            </div>
                             <div>
-                                <span className="text-sm text-slate-200 font-semibold block mb-1">Support Email</span>
-                                <p className="text-sm text-white">support@emedicinebd.com</p>
+                                <p className="text-[8px] font-bold text-slate-400 uppercase leading-none mb-0.5">Download on</p>
+                                <p className="text-[14px] font-black text-white leading-none">App Store</p>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Pay & Trust Indicators */}
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 border-b border-slate-800 pb-12 mb-8">
-                <div className="flex flex-wrap items-center justify-center gap-6">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-lg">
-                        <CheckCircle2 size={16} className="text-primary-500" />
-                        <span className="text-xs font-semibold text-white">Genuine Medicine Only</span>
-                    </div>
-                    <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-lg">
-                        <CheckCircle2 size={16} className="text-emerald-500" />
-                        <span className="text-xs font-semibold text-white">Licensed Pharmacy Operations</span>
-                    </div>
-                    <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-lg">
-                        <CheckCircle2 size={16} className="text-secondary-500" />
-                        <span className="text-xs font-semibold text-white">Secure Checkout Guaranteed</span>
-                    </div>
-                </div>
-
-                <div className="flex items-center space-x-6">
-                    <span className="text-xs font-bold text-slate-500">WE ACCEPT:</span>
-                    <div className="flex gap-3 h-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all opacity-cursor-pointer">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/BKash_Logo.svg/1024px-BKash_Logo.svg.png" alt="bKash" className="h-full" />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nagad_Logo.svg/1200px-Nagad_Logo.svg.png" alt="Nagad" className="h-full" />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" className="h-full" />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" className="h-full" />
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500">
-                <p>&copy; 2026 eMedicine BD Online Pharmacy. All rights reserved.</p>
-                <div className="flex space-x-6">
-                    <Link href="/terms" className="hover:text-white">Terms & Conditions</Link>
-                    <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-                    <Link href="/return" className="hover:text-white">Return & Refund Policy</Link>
+            {/* Certification & Payment */}
+            <div className="max-w-7xl mx-auto border-t border-slate-800 pt-12 mt-12 mb-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-8">
+                    <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center">
+                            <img src="https://www.legitscript.com/wp-content/uploads/2019/07/legitscript-certified.png" alt="LegitScript" className="max-h-full" />
+                        </div>
+                        <p className="text-[10px] font-black w-24 leading-tight uppercase tracking-widest">Globally Certified Pharmacy</p>
+                    </div>
+                    <div className="h-10 w-px bg-slate-800 hidden md:block" />
+                    <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center">
+                            <img src="https://img.icons8.com/color/100/hospital.png" alt="DGDA" className="max-h-full" />
+                        </div>
+                        <p className="text-[10px] font-black w-24 leading-tight uppercase tracking-widest">DGDA Licensed & Verified</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-center lg:items-end gap-4">
+                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Supported Payment Methods</p>
+                    <div className="flex gap-4 h-6 opacity-40 hover:opacity-100 transition-opacity">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/BKash_Logo.svg/1024px-BKash_Logo.svg.png" alt="bKash" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nagad_Logo.svg/1200px-Nagad_Logo.svg.png" alt="Nagad" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] font-bold text-slate-600">
+                <p>&copy; 2026 arogga BD Online Pharmacy. All rights reserved.</p>
+                <div className="flex items-center gap-6">
+                    <Link href="/terms" className="hover:text-primary-500 transition-colors uppercase tracking-widest">Terms</Link>
+                    <Link href="/privacy" className="hover:text-primary-500 transition-colors uppercase tracking-widest">Privacy</Link>
+                    <Link href="/refund" className="hover:text-primary-500 transition-colors uppercase tracking-widest">Refund</Link>
                 </div>
             </div>
         </footer>
