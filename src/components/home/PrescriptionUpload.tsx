@@ -229,7 +229,7 @@ const PrescriptionUpload = () => {
 
                             <p className="text-center text-[10px] text-slate-400 font-bold uppercase tracking-tight flex items-center justify-center gap-2">
                                 <Info size={12} className="text-primary-400" />
-                                Protected by eMedicine BD Privacy Guarantee
+                                Protected by eMedicine Privacy Guarantee
                             </p>
                         </form>
 

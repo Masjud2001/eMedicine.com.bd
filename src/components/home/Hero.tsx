@@ -83,7 +83,7 @@ const Hero = () => {
                     </Swiper>
                 </div>
 
-                {/* Side Static Banners (Arogga Style) */}
+                {/* Side Static Banners (eMedicine Style) */}
                 <div className="flex-1 flex flex-col gap-6">
                     <div className="flex-1 rounded-[2rem] bg-primary-500 overflow-hidden relative group cursor-pointer p-8 flex flex-col justify-between shadow-xl shadow-primary-500/10 active:scale-[0.98] transition-all">
                         <div className="relative z-10">

@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
         <header className="w-full relative z-50">
-            {/* Top Utility Bar - More Arogga style */}
+            {/* Top Utility Bar - More eMedicine style */}
             <div className="bg-slate-900 text-white py-1.5 px-4 md:px-8 flex justify-between items-center text-[10px] md:text-xs font-medium">
                 <div className="flex items-center space-x-4 md:space-x-6">
                     <Link href="/track-order" className="hover:text-primary-100 transition-colors flex items-center gap-1.5">
@@ -78,7 +78,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    {/* Prominent Search Bar (Arogga Style) */}
+                    {/* Prominent Search Bar (eMedicine Style) */}
                     <div className="hidden md:flex flex-grow max-w-2xl relative">
                         <div className="flex w-full items-center bg-slate-100 rounded-lg overflow-hidden border-2 border-transparent focus-within:border-primary-500/30 transition-all">
                             <div className="relative group shrink-0">

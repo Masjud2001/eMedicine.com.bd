@@ -39,7 +39,7 @@ const Testimonials = () => {
                             Quality Assurance
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                            Why Bangladesh Trusts <span className="text-primary-500 underline decoration-slate-200 underline-offset-8">eMedicine BD</span>
+                            Why Bangladesh Trusts <span className="text-primary-500 underline decoration-slate-200 underline-offset-8">eMedicine</span>
                         </h2>
                         <p className="text-lg text-slate-500 font-semibold leading-relaxed">
                             We are committed to providing the highest standard of healthcare services and authentic medicines at your doorstep.

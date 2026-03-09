@@ -39,7 +39,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
             {/* Content */}
             <div className="flex-1 flex flex-col">
-                {/* Delivery Estimate (Arogga Style) */}
+                {/* Delivery Estimate (eMedicine Style) */}
                 <div className="flex items-center gap-1 text-[9px] font-black text-emerald-600 uppercase tracking-widest mb-1.5">
                     <Rocket size={10} fill="currentColor" />
                     12-24 Hours

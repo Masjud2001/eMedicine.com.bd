@@ -1,6 +1,6 @@
-# eMedicine BD - User Guide
+# eMedicine - User Guide
 
-A brief guide on the primary user flows for the eMedicine BD platform.
+A brief guide on the primary user flows for the eMedicine platform.
 
 ---
 

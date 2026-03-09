@@ -54,7 +54,7 @@ const AuthView = () => {
                         <div className="p-3 bg-primary-500 rounded-2xl group-hover/logo:scale-110 transition-transform">
                             <ShieldCheck size={32} strokeWidth={2.5} />
                         </div>
-                        <span className="text-3xl font-black tracking-tighter ml-4 drop-shadow-xl">eMedicine BD</span>
+                        <span className="text-3xl font-black tracking-tighter ml-4 drop-shadow-xl">eMedicine</span>
                     </Link>
 
                     <div className="space-y-8">
