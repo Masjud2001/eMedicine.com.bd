@@ -1,20 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Plus, FileUp, Zap, Clock, ShieldCheck, HeartPulse, Star, ArrowRight } from "lucide-react";
+import { Plus, FileUp, Zap, Clock, ShieldCheck, HeartPulse, Star, ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
-
-"use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import { FileUp, Search, Zap, Clock, ShieldCheck, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
 
 const banners = [
     {
