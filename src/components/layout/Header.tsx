@@ -65,7 +65,7 @@ const Header = () => {
                                 <Plus size={20} className="text-white" />
                             </div>
                             <span className="text-lg md:text-2xl font-black tracking-tighter text-slate-900">
-                                arogga <span className="text-primary-500">BD</span>
+                                eMedicine
                             </span>
                         </Link>
 

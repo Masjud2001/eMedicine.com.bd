@@ -15,9 +15,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "eMedicine BD | Online Pharmacy & Healthcare Store in Bangladesh",
-  description: "eMedicine BD is your trusted online pharmacy for genuine medicines, health products, and doctor consultation. Fast doorstep delivery across Bangladesh.",
-  keywords: "online pharmacy bangladesh, genuine medicine, emedicine bd, health store dhaka, medicine delivery",
+  title: "eMedicine | Online Pharmacy & Healthcare Store in Bangladesh",
+  description: "eMedicine is your trusted online pharmacy for genuine medicines, health products, and doctor consultation. Fast doorstep delivery across Bangladesh.",
+  keywords: "online pharmacy bangladesh, genuine medicine, emedicine, health store dhaka, medicine delivery",
 };
 
 export default function RootLayout({

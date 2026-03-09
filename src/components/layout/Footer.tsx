@@ -12,7 +12,7 @@ const Footer = () => {
                             <Plus size={20} className="text-white" />
                         </div>
                         <span className="text-2xl font-black tracking-tighter text-white">
-                            arogga <span className="text-primary-500">BD</span>
+                            eMedicine
                         </span>
                     </Link>
                     <p className="text-sm leading-relaxed max-w-xs font-medium">
@@ -113,7 +113,7 @@ const Footer = () => {
             </div>
 
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] font-bold text-slate-600">
-                <p>&copy; 2026 arogga BD Online Pharmacy. All rights reserved.</p>
+                <p>&copy; 2026 eMedicine Online Pharmacy. All rights reserved.</p>
                 <div className="flex items-center gap-6">
                     <Link href="/terms" className="hover:text-primary-500 transition-colors uppercase tracking-widest">Terms</Link>
                     <Link href="/privacy" className="hover:text-primary-500 transition-colors uppercase tracking-widest">Privacy</Link>
