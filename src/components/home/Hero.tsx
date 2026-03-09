@@ -5,164 +5,161 @@ import { Plus, FileUp, Zap, Clock, ShieldCheck, HeartPulse, Star, ArrowRight } f
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import { FileUp, Search, Zap, Clock, ShieldCheck, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import Link from "next/link";
+
+const banners = [
+    {
+        id: 1,
+        title: "Stay Ahead with Health Essentials",
+        subtitle: "Up to 15% discount on all chronic medications",
+        image: "https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80&w=1600",
+        cta: "Order Now",
+        link: "/shop",
+        color: "from-teal-600/20"
+    },
+    {
+        id: 2,
+        title: "Prescription Upload Made Easy",
+        subtitle: "Order within 2 minutes by uploading your prescription",
+        image: "https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1600",
+        cta: "Upload Now",
+        link: "/upload-prescription",
+        color: "from-red-600/20"
+    },
+    {
+        id: 3,
+        title: "Baby Care Specials",
+        subtitle: "Genuine baby products delivered safely to your home",
+        image: "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=1600",
+        cta: "Shop Now",
+        link: "/category/baby-care",
+        color: "from-amber-600/20"
+    }
+];
+
 const Hero = () => {
     return (
-        <section className="relative overflow-hidden bg-white pt-10 pb-20 md:pt-16 md:pb-32 px-4 md:px-8">
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-[60%] h-full bg-slate-50 opacity-40 blur-3xl pointer-events-none -skew-x-12" />
-            <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-100 rounded-full blur-3xl opacity-20" />
-            <div className="absolute -bottom-40 right-40 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-20" />
-
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
-                <div className="flex-1 space-y-10 text-center lg:text-left">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 font-black text-xs uppercase tracking-widest shadow-sm shadow-emerald-200"
+        <section className="bg-white px-4 md:px-8 pt-6 pb-12">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
+                {/* Main Slider */}
+                <div className="flex-[2.5] rounded-[2rem] overflow-hidden shadow-sm relative group">
+                    <Swiper
+                        modules={[Autoplay, Pagination, EffectFade]}
+                        effect="fade"
+                        speed={1000}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        pagination={{ clickable: true }}
+                        className="h-[300px] md:h-[450px]"
                     >
-                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-4 ring-emerald-500/20" />
-                        Your Health, Our Priority
-                    </motion.div>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-5xl md:text-7xl xl:text-8xl font-black text-slate-900 leading-[1.05] tracking-tight drop-shadow-sm"
-                    >
-                        Genuine <span className="text-primary-500">Medicines</span> Delivered to Your <span className="text-secondary-600">Doorstep</span>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-lg md:text-2xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0"
-                    >
-                        Get authentic medicines, healthcare essentials, and pharmacist support within hours. Bangladesh&apos;s most reliable online pharmacy service.
-                    </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
-                    >
-                        <Link href="/upload-prescription">
-                            <Button size="lg" className="rounded-2xl gap-3 shadow-2xl px-10 hover:scale-[1.03] active:scale-95 transition-all h-20 text-lg group">
-                                <FileUp size={24} className="group-hover:translate-y-[-1px] transition-transform" strokeWidth={2.5} />
-                                Upload Prescription
-                            </Button>
-                        </Link>
-                        <Link href="/shop">
-                            <Button variant="outline" size="lg" className="rounded-2xl gap-3 px-10 hover:scale-[1.03] active:scale-95 transition-all h-20 text-lg border-2 border-slate-200 group">
-                                Order Medicines
-                                <ArrowRight size={24} className="text-primary-500 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
-                            </Button>
-                        </Link>
-                    </motion.div>
-
-                    {/* Quick Metrics */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-70"
-                    >
-                        <div className="flex items-center gap-2 group">
-                            <div className="flex -space-x-3 group-hover:-space-x-2 transition-all">
-                                {[1, 2, 3, 4].map(i => (
-                                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden ring-4 ring-slate-50">
-                                        <img src={`https://i.pravatar.cc/100?u=${i}`} alt="user" className="w-full h-full object-cover" />
+                        {banners.map((banner) => (
+                            <SwiperSlide key={banner.id}>
+                                <div className="relative w-full h-full">
+                                    <img
+                                        src={banner.image}
+                                        alt={banner.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className={`absolute inset-0 bg-gradient-to-r ${banner.color} via-transparent to-transparent`} />
+                                    <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 space-y-4">
+                                        <h1 className="text-3xl md:text-5xl font-black text-slate-900 max-w-lg leading-tight">
+                                            {banner.title}
+                                        </h1>
+                                        <p className="text-lg md:text-xl font-bold text-slate-600 max-w-md">
+                                            {banner.subtitle}
+                                        </p>
+                                        <Link href={banner.link}>
+                                            <Button size="lg" className="rounded-xl h-14 px-8 font-black text-sm uppercase tracking-wider shadow-xl hover:scale-105 active:scale-95 transition-all">
+                                                {banner.cta}
+                                                <ArrowRight size={18} className="ml-2" />
+                                            </Button>
+                                        </Link>
                                     </div>
-                                ))}
-                                <div className="w-10 h-10 rounded-full border-2 border-white bg-primary-500 flex items-center justify-center text-[10px] font-bold text-white ring-4 ring-slate-50">
-                                    50K+
                                 </div>
-                            </div>
-                            <div className="flex flex-col">
-                                <div className="flex text-amber-500"><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /></div>
-                                <span className="text-[11px] font-black text-slate-800 uppercase tracking-tighter">Trusted Clients</span>
-                            </div>
-                        </div>
-                        <div className="w-px h-10 bg-slate-200" />
-                        <div className="flex items-center gap-2.5">
-                            <ShieldCheck className="text-secondary-500" size={28} />
-                            <div className="flex flex-col">
-                                <span className="text-sm font-bold text-slate-900 leading-none">DGDA Certified</span>
-                                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Licensed Pharmacy</span>
-                            </div>
-                        </div>
-                    </motion.div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
 
-                {/* Hero Illustration / Graphics */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex-1 w-full max-w-2xl relative"
-                >
-                    {/* Main Visual */}
-                    <div className="relative z-10 w-full aspect-square md:aspect-[4/3] rounded-[3rem] bg-white shadow-2xl overflow-hidden border-8 border-white group">
-                        <img
-                            src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1200"
-                            alt="eMedicine BD Pharmacy"
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                        />
-                        {/* Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
-
-                        <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between">
-                            <div className="px-6 py-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-white/20">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-3 bg-emerald-500 rounded-xl text-white">
-                                        <Zap size={24} fill="white" />
-                                    </div>
-                                    <div>
-                                        <span className="text-xs font-black text-slate-400 uppercase tracking-wider block leading-none mb-1">Estimated Delivery</span>
-                                        <p className="text-xl font-black text-slate-900">Across Dhaka in <span className="text-emerald-500">2-4 Hours</span></p>
-                                    </div>
-                                </div>
-                            </div>
+                {/* Side Static Banners (Arogga Style) */}
+                <div className="flex-1 flex flex-col gap-6">
+                    <div className="flex-1 rounded-[2rem] bg-primary-500 overflow-hidden relative group cursor-pointer p-8 flex flex-col justify-between shadow-xl shadow-primary-500/10 active:scale-[0.98] transition-all">
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-black text-white leading-tight">Upload<br />Prescription</h3>
+                            <p className="text-white/80 text-xs font-bold mt-2 uppercase tracking-widest leading-none">Order in 2 mins</p>
                         </div>
+                        <Link href="/upload-prescription" className="relative z-10 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-primary-500 shadow-xl group-hover:scale-110 transition-transform">
+                            <FileUp size={24} />
+                        </Link>
+                        {/* Abstract background element */}
+                        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all" />
                     </div>
 
-                    {/* Floating cards */}
-                    <motion.div
-                        animate={{ y: [0, -15, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute -top-12 -right-12 z-20 p-5 bg-white rounded-3xl shadow-2xl border border-slate-50 max-w-[200px]"
-                    >
-                        <div className="flex flex-col gap-3">
-                            <div className="w-12 h-12 rounded-2xl bg-primary-50 flex items-center justify-center">
-                                <HeartPulse className="text-primary-500" size={28} />
-                            </div>
-                            <p className="text-sm font-bold text-slate-900 leading-snug">Expert Pharmacist Support Always Available</p>
-                            <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                                <div className="h-full w-2/3 bg-primary-500 rounded-full" />
-                            </div>
+                    <div className="flex-1 rounded-[2rem] bg-secondary-500 overflow-hidden relative group cursor-pointer p-8 flex flex-col justify-between shadow-xl shadow-secondary-500/10 active:scale-[0.98] transition-all">
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-black text-white leading-tight">Flash Sale<br />Every Hour</h3>
+                            <p className="text-white/80 text-xs font-bold mt-2 uppercase tracking-widest leading-none">Upto 40% OFF</p>
                         </div>
-                    </motion.div>
+                        <Link href="/shop" className="relative z-10 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-secondary-500 shadow-xl group-hover:scale-110 transition-transform">
+                            <Zap size={24} fill="currentColor" />
+                        </Link>
+                        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all" />
+                    </div>
+                </div>
+            </div>
 
-                    <motion.div
-                        animate={{ y: [0, 20, 0] }}
-                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                        className="absolute -bottom-10 -left-10 z-20 p-6 bg-slate-900 rounded-3xl shadow-2xl border border-slate-800 flex items-center gap-5"
-                    >
-                        <div className="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center border border-slate-700">
-                            <Clock className="text-emerald-400" size={32} />
-                        </div>
-                        <div>
-                            <p className="text-sm font-black text-white uppercase tracking-wider mb-1">Fast Refill</p>
-                            <p className="text-xs text-slate-400 leading-relaxed font-medium">Order previous medications<br />with just one tap.</p>
-                        </div>
-                    </motion.div>
-                </motion.div>
+            {/* Sub-hero trust badges */}
+            <div className="max-w-7xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 border-t border-slate-100 pt-12">
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary-50 group-hover:text-primary-500 transition-all">
+                        <ShieldCheck size={28} />
+                    </div>
+                    <div>
+                        <p className="text-sm font-black text-slate-900 leading-none mb-1">Genuine Meds</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">DGDA Certified</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary-50 group-hover:text-primary-500 transition-all">
+                        <Clock size={28} />
+                    </div>
+                    <div>
+                        <p className="text-sm font-black text-slate-900 leading-none mb-1">Fast Delivery</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Across Dhaka</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary-50 group-hover:text-primary-500 transition-all">
+                        <Zap size={28} />
+                    </div>
+                    <div>
+                        <p className="text-sm font-black text-slate-900 leading-none mb-1">Flash Deals</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Best Prices</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary-50 group-hover:text-primary-500 transition-all">
+                        <Search size={28} />
+                    </div>
+                    <div>
+                        <p className="text-sm font-black text-slate-900 leading-none mb-1">10K+ Products</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Wide Range</p>
+                    </div>
+                </div>
             </div>
         </section>
     );
 };
+
+export { Hero };
+
 
 export { Hero };
