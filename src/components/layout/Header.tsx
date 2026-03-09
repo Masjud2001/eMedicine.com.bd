@@ -192,6 +192,3 @@ const ChevronRight = ({ size, className }: { size: number, className?: string })
 );
 
 export { Header };
-
-
-export { Header };

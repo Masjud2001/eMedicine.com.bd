@@ -160,6 +160,3 @@ const Hero = () => {
 };
 
 export { Hero };
-
-
-export { Hero };

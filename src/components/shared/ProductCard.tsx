@@ -13,91 +13,81 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
     return (
-        <div className="group relative bg-white rounded-2xl border border-slate-100 p-4 transition-all hover:shadow-medium hover:border-primary-100 flex flex-col h-full animate-in fade-in slide-in-from-bottom-2 duration-500 fill-mode-both">
-            {/* Badge */}
-            <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
-                {product.discountPercentage > 0 && (
-                    <span className="bg-accent-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">
-                        {product.discountPercentage}% OFF
-                    </span>
-                )}
-                {product.prescriptionRequired && (
-                    <span className="bg-secondary-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm flex items-center gap-1">
-                        <Info size={10} />
-                        Rx Required
-                    </span>
-                )}
-            </div>
+        <div className="group relative bg-white rounded-xl border border-slate-100 p-3.5 transition-all hover:shadow-lg hover:border-slate-200 flex flex-col h-full animate-in fade-in duration-500">
+            {/* Discount Badge */}
+            {product.discountPercentage > 0 && (
+                <div className="absolute top-0 left-0 z-10">
+                    <div className="bg-secondary-500 text-white text-[9px] font-black px-2 py-1 rounded-tl-xl rounded-br-xl shadow-sm uppercase tracking-tighter">
+                        -{product.discountPercentage}% OFF
+                    </div>
+                </div>
+            )}
 
             {/* Wishlist */}
-            <button className="absolute top-4 right-4 z-10 p-2.5 bg-white/80 backdrop-blur-md rounded-full text-slate-400 hover:text-red-500 hover:bg-white shadow-soft transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+            <button className="absolute top-3 right-3 z-10 p-1.5 text-slate-300 hover:text-red-500 transition-colors">
                 <Heart size={18} />
             </button>
 
             {/* Image Container */}
-            <Link href={`/product/${product.id}`} className="block relative aspect-square mb-5 bg-slate-50 rounded-xl overflow-hidden group/img">
+            <Link href={`/product/${product.id}`} className="block relative aspect-square mb-3 bg-slate-50/50 rounded-lg overflow-hidden group/img">
                 <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-contain p-4 group-hover/img:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-2 group-hover/img:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-primary-500/10 opacity-0 group-hover/img:opacity-100 transition-opacity" />
             </Link>
 
             {/* Content */}
             <div className="flex-1 flex flex-col">
-                <div className="mb-0.5">
-                    <Link href={`/brand/${product.brand}`} className="text-[10px] font-bold uppercase tracking-wider text-slate-400 hover:text-primary-500 transition-colors">
-                        {product.brand}
-                    </Link>
+                {/* Delivery Estimate (Arogga Style) */}
+                <div className="flex items-center gap-1 text-[9px] font-black text-emerald-600 uppercase tracking-widest mb-1.5">
+                    <Rocket size={10} fill="currentColor" />
+                    12-24 Hours
                 </div>
-                <Link href={`/product/${product.id}`} className="block mb-2 text-sm font-bold text-slate-900 line-clamp-2 hover:text-primary-500 transition-colors leading-tight">
+
+                <Link href={`/product/${product.id}`} className="block mb-1 text-sm font-bold text-slate-800 line-clamp-2 hover:text-primary-500 transition-colors leading-tight min-h-[40px]">
                     {product.name}
                 </Link>
 
-                {product.genericName && (
-                    <p className="text-[11px] text-slate-500 mb-2 italic line-clamp-1 h-4">
-                        {product.genericName}
-                    </p>
-                )}
-
-                {/* Rating */}
-                <div className="flex items-center gap-1.5 mb-4">
-                    <div className="flex text-amber-400">
+                <div className="flex items-center gap-1 mb-2">
+                    <div className="flex text-amber-500">
                         {[...Array(5)].map((_, i) => (
-                            <Star key={i} size={12} fill={i < Math.floor(product.rating) ? "currentColor" : "none"} strokeWidth={1.5} />
+                            <Star key={i} size={10} fill={i < Math.floor(product.rating || 4) ? "currentColor" : "none"} strokeWidth={1.5} />
                         ))}
                     </div>
-                    <span className="text-[10px] font-semibold text-slate-500">
-                        ({product.reviewsCount})
-                    </span>
+                    <span className="text-[9px] font-bold text-slate-400">({product.reviewsCount || 12})</span>
                 </div>
 
                 {/* Price & Action */}
                 <div className="mt-auto flex items-end justify-between">
-                    <div className="space-y-0.5">
-                        {product.discountPercentage > 0 && (
-                            <span className="text-[11px] text-slate-400 line-through font-medium">
-                                {formatPrice(product.mrp)}
+                    <div className="flex flex-col">
+                        <div className="flex items-baseline gap-1.5 flex-wrap">
+                            <span className="text-base font-black text-slate-900 leading-none">
+                                {formatPrice(product.price)}
                             </span>
-                        )}
-                        <div className="text-lg font-black text-slate-900 flex items-center gap-1">
-                            {formatPrice(product.price)}
+                            {product.discountPercentage > 0 && (
+                                <span className="text-[10px] text-slate-400 line-through font-bold">
+                                    {formatPrice(product.mrp)}
+                                </span>
+                            )}
                         </div>
                     </div>
 
-                    <div className="flex gap-2">
-                        <button className="p-2.5 bg-slate-100 text-slate-600 rounded-xl hover:bg-slate-200 transition-colors">
-                            <Eye size={18} />
-                        </button>
-                        <Button size="icon" className="w-10 h-10 rounded-xl">
-                            <Plus size={20} strokeWidth={2.5} />
-                        </Button>
-                    </div>
+                    <button className="flex items-center gap-1 px-3 py-1.5 bg-white border-2 border-primary-500 text-primary-500 rounded-lg text-xs font-black hover:bg-primary-500 hover:text-white transition-all transform active:scale-95">
+                        <Plus size={14} strokeWidth={3} />
+                        ADD
+                    </button>
                 </div>
             </div>
         </div>
     );
 };
+
+const Rocket = ({ size, className, fill }: { size: number, className?: string, fill?: string }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill={fill || "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3" /><path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5" /></svg>
+);
+
+export { ProductCard };
+
 
 export { ProductCard };
