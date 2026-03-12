@@ -19,6 +19,8 @@ export interface Product {
     tags?: string[];
     sku: string;
     safetyDisclaimer?: string;
+    isNew?: boolean;
+    isWishlisted?: boolean;
 }
 
 export interface Category {
